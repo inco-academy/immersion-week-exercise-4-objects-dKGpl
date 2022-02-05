@@ -5,8 +5,6 @@ module.exports = function translate(inObj, inText) {
   for(word of textArr){
       Object.keys(inObj).includes(word) ? translatedArr.push(inObj[word]) : err = true
   }
-  if(err) {
-      translatedArr = ["Error: missing value"]
-  }
-  return translatedArr.join(" ")
+  
+  return err ? "Error: missing value" : translatedArr.join(" ")
 };
