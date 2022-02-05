@@ -1,7 +1,7 @@
-module.exports = function groupFamilies(inObj) {
-  const sKeysObj = {}
-  for(obj of inObj) {
-      !sKeysObj[obj.surname] ? sKeysObj[obj.surname] = [obj.name] : sKeysObj[obj.surname].push(obj.name)
+module.exports = function groupFamilies(ObjArr) {
+  const families = {}
+  for(innerObj of ObjArr) {
+      families[innerObj.surname] ? families[innerObj.surname].push(innerObj.name) : families[innerObj.surname] = [innerObj.name]
   }
-  return sKeysObj
+  return families
 };
