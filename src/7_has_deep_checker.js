@@ -1,5 +1,5 @@
 module.exports = function hasValueDepth(inObj, inStr) {
-  let searchResult = []
+  const searchResult = []
   searchOccurrence(inObj, inStr)
   return searchResult.includes(true) ? true : false
 
