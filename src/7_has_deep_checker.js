@@ -5,7 +5,7 @@ module.exports = function hasValueDepth(inObj, inStr) {
 
   // Search string inside nested objects function
   function searchOccurrence(objToSearch, searchStr) {
-      for(let key in objToSearch) {
+      for(const key in objToSearch) {
           if(objToSearch[key] === searchStr) searchResult.push(true)
           if(objToSearch[key] instanceof Object) searchOccurrence(objToSearch[key], searchStr)
       }

@@ -1,7 +1,7 @@
 module.exports = function countOccurences(inputText) {
   const textArr = inputText.split(" "),
         result = {}
-  for(e of textArr) {
+  for(const e of textArr) {
       let dupIdx = 0
       for(ref of textArr) {
           if(e === ref) dupIdx++
