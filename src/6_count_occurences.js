@@ -1,12 +1,12 @@
 module.exports = function countOccurences(inputText) {
-  const textArr = inputText.split(" ")
-  const outArr = {}
-  for(el of textArr) {
+  const textArr = inputText.split(" "),
+        result = {}
+  for(e of textArr) {
       let duplicateIndex = 0
-      for(compareEl of textArr) {
-          if(el === compareEl) duplicateIndex++
+      for(ref of textArr) {
+          if(e === ref) duplicateIndex++
       }
-      outArr[duplicateIndex] ? outArr[duplicateIndex].includes(el) ? false : outArr[duplicateIndex].push(el) : outArr[duplicateIndex] = [el]
+      result[duplicateIndex] ? result[duplicateIndex].includes(e) ? false : result[duplicateIndex].push(e) : result[duplicateIndex] = [e]
   } 
-  return outArr
+  return result
 };
